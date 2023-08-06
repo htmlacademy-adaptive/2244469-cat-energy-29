@@ -13,6 +13,8 @@
 
   &--find-program {
     position: relative;
+    width: 280px;
+    margin: 0 auto;
     z-index: 10;
   }
 
@@ -24,5 +26,15 @@
     background-color: #f2f2f2;
     color: #444444;
     border: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button--find-program {
+    position: absolute;
+    padding: 14px 26px;
+    top: 295px;
+    left: 120px;
+    width: 244px;
   }
 }

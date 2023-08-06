@@ -19,7 +19,19 @@
 
 @media (min-width: @tablet-width) {
   .navigation-list {
+    margin: 0 0 0 auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 0 33px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .navigation-list__link {
+    padding: 12px 0;
+  }
+
+  .navigation-list__item--current {
+    border-bottom: 2px solid #68B738;
   }
 }
