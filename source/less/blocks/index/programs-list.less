@@ -10,12 +10,76 @@
 @media (min-width: @tablet-width) {
   .programs-list {
     gap: 30px;
+    margin: 0 auto;
+    width: 708px;
   }
 }
 
 .programs-list__item {
+  position: relative;
   padding: 20px;
   background-color: #f2f2f2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @color-secondary;
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 27px;
+    width: 36px;
+    height: 50px;
+    background: url("../../../img/icons/program-cat-slim.svg") no-repeat center;
+  }
+
+  &--pro::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background: url("../../../img/icons/program-cat-pro.svg") no-repeat center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs-list__item {
+    width: 708px;
+    padding: 77px 360px 57px 52px;
+  }
+
+  .programs-list__item::before {
+    top: 92px;
+    left: 445px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .programs-list__item--slim::after {
+    top: 81px;
+    left: 475px;
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+  }
+
+  .programs-list__item--pro::after {
+    top: 135px;
+    left: 411px;
+    width: 268px;
+    height: 113px;
+    background-size: 268px 113px;
+  }
 }
 
 .programs-list__heading {
@@ -28,16 +92,34 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .programs-list__heading {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
 .programs-list__text {
   margin: 0;
+  padding: 0 0 23px 0;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: #444444;
 }
 
+@media (min-width: @tablet-width) {
+  .programs-list__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+}
+
 .programs-list__button {
   display: block;
+  padding: 14px 0 0 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 36px;
@@ -45,4 +127,15 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  background: url("../../../img/icons/icon_arrow.svg") no-repeat 102px 26px;
+  border-top: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .programs-list__button {
+    font-size: 20px;
+    line-height: normal;
+    background-position: 129px 24px;
+    border: none;
+  }
 }

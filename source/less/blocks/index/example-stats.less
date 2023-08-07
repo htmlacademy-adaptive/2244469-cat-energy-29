@@ -1,8 +1,16 @@
 .example-stats {
+  position: relative;
+  z-index: 10;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .example-stats {
+    width: 500px;
+  }
 }
 
 .example-stats__table {
@@ -16,10 +24,24 @@
   text-align: center;
 }
 
+@media (min-width: @tablet-width) {
+  .example-stats__value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 .example-stats__description {
   margin: 0;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .example-stats__description {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
