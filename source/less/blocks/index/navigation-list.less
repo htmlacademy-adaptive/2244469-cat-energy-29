@@ -8,6 +8,26 @@
   text-transform: uppercase;
   list-style-type: none;
   text-align: center;
+  background-color: #ffffff;
+  display: none;
+}
+
+.navigation-list__item {
+  border-top: 1px solid #e6e6e6;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .navigation-list__item {
+    border: none;
+  }
+
+  .navigation-list__item:last-of-type {
+    border: none;
+  }
 }
 
 .navigation-list__link {
