@@ -27,6 +27,10 @@
     color: #444444;
     border: none;
   }
+
+  &--order {
+    grid-column: 1/-1;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -36,5 +40,12 @@
     top: 295px;
     left: 120px;
     width: 244px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--find-program {
+    top: 290px;
+    left: 190px;
   }
 }

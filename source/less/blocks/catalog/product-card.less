@@ -1,4 +1,7 @@
 .product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 0;
   padding: 19px 20px 25px 20px;
   border-top: 1px solid #ebebeb;
 
@@ -8,10 +11,16 @@
 }
 
 .product-card__link {
-  margin: 0 0 22px 0;
-  display: flex;
-  gap: 20px 36px;
+  display: block;
   text-decoration: none;
+
+  &--image {
+    text-align: center;
+  }
+
+  &--heading {
+    padding: 0 50px 0 0;
+  }
 }
 
 .product-card__heading {
