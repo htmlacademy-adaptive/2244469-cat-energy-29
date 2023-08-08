@@ -26,6 +26,10 @@
   color: #444444;
 }
 
+.example__table-container {
+  margin: 0;
+}
+
 .example__total {
   position: relative;
   z-index: 10;
@@ -83,6 +87,33 @@
 
 @media (min-width: @desktop-width) {
   .example {
+    display: block;
+    padding: 0 110px;
     border-top: none;
+  }
+
+  .example__heading {
+    margin: 0 0 146px 0;
+  }
+
+  .example__description {
+    width: 436px;
+    margin: 0 0 69px 0;
+  }
+
+  .example__table-container {
+    margin: 0 0 55px 0;
+  }
+
+  .example__total {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 400px;
+    text-align: left;
+  }
+
+  .example__total span {
+    padding: 0 0 0 63px;
   }
 }
