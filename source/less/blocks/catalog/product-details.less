@@ -11,3 +11,19 @@
   line-height: 16px;
   color: #444444;
 }
+
+@media (min-width: @tablet-width) {
+  .product-details__table {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .product-details__table:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+
+  .product-details__description,
+  .product-details__value {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
