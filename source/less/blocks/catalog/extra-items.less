@@ -12,3 +12,31 @@
   line-height: 14px;
   color: #444444;
 }
+
+@media (min-width: @tablet-width) {
+  .extra-items__table {
+    margin: 0;
+    justify-content: flex-end;
+    gap: 10px 48px;
+  }
+
+  .extra-items__description,
+  .extra-items__price{
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-items__table {
+    padding: 10px 0 0 0;
+    justify-content: space-between;
+    gap: 10px 40px;
+  }
+
+  .extra-items__price {
+    width: 60px;
+    text-align: center;
+  }
+}
