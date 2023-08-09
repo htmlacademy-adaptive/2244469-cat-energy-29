@@ -1,5 +1,22 @@
 .header {
+  position: relative;
   padding: 14px 20px;
   display: flex;
+  background: #ffffff url("../../../img/logos/logo-text.svg") no-repeat center 22px;
+  background-size: 101px 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    padding: 25px 30px 65px 30px;
+    background: #ffffff url("../../../img/logos/logo-text-tablet-desktop-header.svg") no-repeat 73px 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    padding: 55px 110px 52px 110px;
+    background-position: 194px 74px;
+  }
 }
 

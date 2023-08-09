@@ -1,6 +1,19 @@
 .catalog-list {
   margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-list {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    gap: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    grid-template-columns: repeat(4, 245px);
+    gap: 63px 80px;
+  }
+}

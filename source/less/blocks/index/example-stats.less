@@ -1,5 +1,6 @@
 .example-stats {
-  margin: 0;
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 32px;
@@ -22,4 +23,20 @@
   line-height: 12px;
   text-align: center;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .example-stats {
+    width: 500px;
+  }
+
+  .example-stats__value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example-stats__description {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

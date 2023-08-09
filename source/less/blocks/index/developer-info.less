@@ -3,7 +3,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
   line-height: 20px;
   text-decoration: none;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .developer-info__link {
+    gap: 20px 23px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .developer-info__link {
+    padding: 0;
+  }
 }
