@@ -2,6 +2,7 @@
   position: relative;
   padding: 0 20px;
   background: @color-secondary url("../../../img/photos/catalog-promo-offer-background.jpg") no-repeat center;
+  background-size: 100% auto;
 }
 
 .promo-offer__text {
@@ -16,7 +17,7 @@
   &::before {
     position: absolute;
     bottom: 40%;
-    left: 45%;
+    left: calc(50% - 39px);
     width: 78px;
     height: 80px;
     background: url("../../../img/icons/icon-gift.svg") no-repeat center;
@@ -27,7 +28,7 @@
 @media (min-width: @tablet-width) {
   .promo-offer {
     padding: 0;
-    width: 707px;
+    min-height: 200px;
     background: @color-secondary url("../../../img/photos/catalog-promo-offer-background-tablet.jpg") no-repeat center;
     background-size: 100% auto;
   }
@@ -46,9 +47,10 @@
 @media (min-width: @desktop-width) {
   .promo-offer {
     margin: 0;
-    width: 245px;
+    height: 288px;
+    min-width: 245px;
     background: @color-secondary url("../../../img/photos/catalog-promo-offer-background-desktop.jpg") no-repeat left center;
-    background-size: 245px 288px;
+    background-size: 100% auto;
   }
 
   .promo-offer__text {

@@ -11,9 +11,6 @@
 }
 
 .method-details__list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -21,10 +18,18 @@
 
 .method-details__item {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
   padding: 0 0 0 80px;
+  min-height: 60px;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -66,12 +71,13 @@
 
   .method-details__list {
     display: grid;
-    grid-template-columns: repeat(2, 230px);
-    gap: 37px 153px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 130px;
   }
 
   .method-details__item {
     padding: 151px 0 57px 0;
+    min-width: 230px;
   }
 
   .method-details__item::before {
@@ -141,7 +147,7 @@
   }
 
   .method-details__list {
-    grid-template-columns: repeat(4, 230px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px 94px;
   }
 }

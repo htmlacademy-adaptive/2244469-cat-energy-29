@@ -6,14 +6,16 @@
 @media (min-width: @tablet-width) {
   .catalog-list {
     display: grid;
-    grid-template-columns: repeat(2, 324px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    padding: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-list {
-    grid-template-columns: repeat(4, 245px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
+    padding: 0 110px;
   }
 }

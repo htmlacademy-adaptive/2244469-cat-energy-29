@@ -80,25 +80,24 @@
 @media (min-width: @tablet-width) {
   .programs-list {
     gap: 30px;
-    margin: 0 auto;
-    width: 708px;
   }
 
   .programs-list__item {
-    width: 708px;
     padding: 77px 360px 57px 52px;
   }
 
   .programs-list__item::before {
-    top: 92px;
-    left: 445px;
+    top: 91px;
+    left: auto;
+    right: 63px;
     width: 200px;
     height: 200px;
   }
 
   .programs-list__item--slim::after {
     top: 81px;
-    left: 475px;
+    left: auto;
+    right: 93px;
     width: 140px;
     height: 194px;
     background-size: 140px 194px;
@@ -106,7 +105,8 @@
 
   .programs-list__item--pro::after {
     top: 135px;
-    left: 411px;
+    left: auto;
+    right: 28px;
     width: 268px;
     height: 113px;
     background-size: 268px 113px;
@@ -137,13 +137,11 @@
   .programs-list {
     flex-direction: row;
     gap: 30px 80px;
-    margin: 0 auto;
-    width: 1220px;
   }
 
   .programs-list__item {
-    width: 570px;
     padding: 77px 61px 57px 52px;
+    min-width: 50%;
   }
 
   .programs-list__item::before {
