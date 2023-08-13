@@ -1,10 +1,19 @@
 .special-heading {
   position: relative;
+  padding: 0 20px 0 20px;
   background-color: #ffffff;
-  padding: 0 20px 0 0;
 }
 
-.additional-products__heading::before {
+.special-title {
+  position: relative;
+  padding: 0 20px 0 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  width: 100%;
+}
+
+.special-title::before {
   position: absolute;
   top: 16px;
   left: 0;
@@ -19,11 +28,11 @@
     padding: 0 40px;
   }
 
-  .additional-products__heading {
+  .special-title {
     padding-left: 30px;
   }
 
-  .additional-products__heading::before {
+  .special-title::before {
     position: absolute;
     top: 23px;
     left: 0;
@@ -35,7 +44,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .additional-products__heading {
+  .special-title {
     padding-left: 70px;
   }
 }

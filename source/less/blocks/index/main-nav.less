@@ -1,13 +1,9 @@
 .main-nav {
-  position: absolute;
+  position: relative;
   padding: 35px 0 0 0;
-  top: 32px;
+  top: 12px;
   right: 0;
   width: 100%;
-
-  &:hover .navigation-list {
-    display: block;
-  }
 
   &:hover .main-nav__toggle {
     background: url("../../../img/close-button-icon.svg") no-repeat center;
@@ -31,17 +27,10 @@
   &:active {
     background: url("../../../img/close-button-icon.svg") no-repeat center;
   }
-
-  &:hover + .navigation-list,
-  &:focus + .navigation-list,
-  &:active + .navigation-list {
-    display: block;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    position: relative;
     top: auto;
     right: auto;
     width: 436px;
@@ -60,5 +49,6 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 476px;
+    max-width: 580px;
   }
 }

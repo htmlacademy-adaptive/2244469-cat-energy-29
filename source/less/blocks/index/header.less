@@ -1,21 +1,28 @@
 .header {
   position: relative;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
+  padding: 23px 0 0 0;
+  min-height: 66px;
   background: #ffffff url("../../../img/logos/logo-text.svg") no-repeat center 22px;
   background-size: 101px 18px;
   z-index: 20;
 }
 
 .header__logo {
-  width: 180px;
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 33px;
+  height: 38px;
 }
 
 @media (min-width: @tablet-width) {
   .header {
     padding: 25px 30px 65px 30px;
     background: transparent url("../../../img/logos/logo-text-tablet-desktop-header.svg") no-repeat 73px 36px;
+  }
+
+  .header__main-nav {
+    margin-left: auto;
   }
 }
 
