@@ -1,0 +1,36 @@
+.checkbox {
+  margin-bottom: 13px;
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  padding: 6px 0 0 45px;
+  min-height: 32px;
+  cursor: pointer;
+}
+
+.checkbox__label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  content: "";
+}
+
+.checkbox__label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  content: "";
+  background: url("../../../img/checkbox-tick.svg") no-repeat center;
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  display: block;
+}
