@@ -15,12 +15,14 @@
   color: #000000;
 }
 
-.page__body--index::before {
-  position: absolute;
-  top: -2px;
-  right: 0;
-  width: 50%;
-  height: 400px;
-  background-color: #62a63a;
-  content: "";
+@media (min-width: @desktop-width) {
+  .page__body--index::before {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 50%;
+    height: 400px;
+    background-color: #62a63a;
+    content: "";
+  }
 }
