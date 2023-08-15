@@ -1,11 +1,15 @@
 .main-nav {
   position: relative;
-  top: 37px;
   right: 0;
   width: 100%;
+  padding-top: 37px;
 
   &:hover .main-nav__toggle {
     background: url("../../../img/close-button-icon.svg") no-repeat center;
+  }
+
+  &--no-js .navigation-list {
+    display: block;
   }
 }
 
