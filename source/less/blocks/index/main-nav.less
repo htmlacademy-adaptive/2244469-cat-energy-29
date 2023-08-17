@@ -4,10 +4,6 @@
   width: 100%;
   margin-top: 37px;
 
-  &:hover .main-nav__toggle {
-    background: url("../../../img/close-button-icon.svg") no-repeat center;
-  }
-
   &--no-js .navigation-list {
     display: block;
   }
@@ -24,12 +20,18 @@
   border: none;
   appearance: none;
   cursor: pointer;
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-    background: url("../../../img/close-button-icon.svg") no-repeat center;
-  }
+.main-nav--closed .main-nav__toggle {
+  background: url("../../../img/main-nav-open-button-icon.svg") no-repeat center;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background: url("../../../img/close-button-icon.svg") no-repeat center;
+}
+
+.main-nav--opened .navigation-list {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
