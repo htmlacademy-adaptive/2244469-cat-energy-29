@@ -13,6 +13,7 @@
   justify-content: space-between;
   gap: 20px;
   padding: 26px 20px;
+  background-color: #ffffff;
 }
 
 .contacts-info__heading {
@@ -33,9 +34,41 @@
   color: #444444;
 }
 
-.contacts-info__live-map,
-.contacts-info__map-image {
+.contacts-info__live-map {
+  position: relative;
+  height: 362px;
   width: 100%;
+  z-index: 5;
+}
+
+.contacts-info__map-image {
+  position: absolute;
+  left: 0;
+  height: 362px;
+  width: 100%;
+}
+
+.contacts-info__map-container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 138px;
+    left: calc(50% - 29px);
+    width: 58px;
+    height: 54px;
+    background: url("../../../img/map-pin-mobile@1x.png") no-repeat center;
+    background-size: 100% auto;
+    content: "";
+    z-index: 10;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &::before {
+      background: url("../../../img/map-pin-mobile@2x.png") no-repeat center;
+      background-size: 100% auto;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -61,15 +94,56 @@
     line-height: 20px;
     text-align: right;
   }
+
+  .contacts-info__map-container {
+    &::before {
+      top: 146px;
+      left: calc(50% - 68px);
+      width: 114px;
+      height: 106px;
+      background: url("../../../img/map-pin-tablet@1x.png") no-repeat center;
+      background-size: 100% auto;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background: url("../../../img/map-pin-tablet@2x.png") no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  .contacts-info__live-map,
+  .contacts-info__map-image {
+    height: 400px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts-info__container {
+    position: relative;
+    margin: 0 auto;
+    padding: 95px 40px 106px 40px;
+    max-width: 1300px;
+    z-index: 10;
+  }
+
   .contacts-info__wrapper {
-    position: absolute;
-    top: 95px;
-    left: 110px;
     width: 565px;
     padding: 60px 78px;
     background-color: #ffffff;
+  }
+
+  .contacts-info__map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+
+    &::before {
+      top: 131px;
+      left: calc(70% - 68px);
+    }
   }
 }

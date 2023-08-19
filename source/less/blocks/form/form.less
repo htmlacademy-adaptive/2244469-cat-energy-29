@@ -21,3 +21,56 @@
   color: #444444;
   white-space: nowrap;
 }
+
+.form__button-container {
+  padding: 34px 20px 32px 20px;
+}
+
+.form__submit-button {
+  margin: 0 auto 21px auto;
+  width: 100%;
+}
+
+.form__explanation {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form__item {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .form__button-container {
+    display: flex;
+    align-items: baseline;
+    gap: 64px 20px;
+    padding: 0 30px 60px 30px;
+  }
+
+  .form__submit-button {
+    width: 282px;
+    margin: 0 0 0 41px;
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 70px 80px;
+  }
+
+  .form__group-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 80px;
+    padding: 66px 40px 70px 40px;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+}

@@ -1,6 +1,6 @@
 .group-additional {
   padding: 0;
-  margin: 23px 0 34px 0;
+  margin: 0
 }
 
 .group-additional__title {
@@ -9,4 +9,25 @@
 
 .group-additional__list {
   padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .group-additional {
+    margin: 0;
+  }
+
+  .group-additional__title {
+    margin-bottom: 0;
+  }
+
+  .group-additional__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 100px;
+    padding: 57px 70px 54px 70px;
+  }
+
+  .group-additional__item {
+    margin-bottom: 0;
+  }
 }
