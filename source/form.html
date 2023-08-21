@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин корма для кошек "Кэт энерджи"</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page__body">
   <header class="header">
     <a class="header__logo logo logo--header" href="index.html">
@@ -38,46 +40,46 @@
     <p class="main-container__inner-text form-page__inner-text">Заполните анкету, и мы подберем
       программу питания для вашего кота</p>
     <form class="form-page__form form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="form__group-container">
-        <fieldset class="form__group group-name">
-          <ul class="form__list group-name__list">
-            <li class="form__item group-name__item text-input">
-              <label for="name-field" class="text-input__label">Имя:*</label>
-              <input class="text-input__input" type="text" name="name-field" id="name-field" value="Барсик"
-                placeholder="Введите имя питомца" required>
-            </li>
-            <li class="form__item group-name__item text-input">
-              <label for="weight-field" class="text-input__label">Вес (кг):*</label>
-              <input class="text-input__input" type="number" name="weight-field" id="weight-field" value="7"
-                placeholder="Введите вес питомца" required>
-            </li>
-            <li class="form__item group-name__item text-input">
-              <label for="age-field" class="text-input__label">Возраст (лет):</label>
-              <input class="text-input__input" type="number" name="age-field" id="age-field" value="7"
-                placeholder="Введите возраст питомца" required>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__group group-program">
-          <ul class="form__list group-program__list">
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" name="program-goal" id="weight-loss" checked>
-              <label for="weight-loss" class="radio__label">Похудение</label>
-            </li>
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" name="program-goal" id="weight-gain">
-              <label for="weight-gain" class="radio__label">Набор массы</label>
-            </li>
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" name="program-goal" id="need-advice">
-              <label for="need-advice" class="radio__label">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
-      </div>
-      <fieldset class="form__group group-contacts">
+      <fieldset class="form__group form__group-name group-name">
+        <ul class="form__list group-name__list">
+          <li class="form__item group-name__item text-input">
+            <label for="name-field" class="text-input__label">Имя:*</label>
+            <input class="text-input__input" type="text" name="name-field" id="name-field" value="Барсик"
+              placeholder="Введите имя питомца" required>
+          </li>
+          <li class="form__item group-name__item text-input">
+            <label for="weight-field" class="text-input__label">Вес (кг):*</label>
+            <input class="text-input__input" type="number" name="weight-field" id="weight-field" value="7"
+              placeholder="Введите вес питомца" required>
+          </li>
+          <li class="form__item group-name__item text-input">
+            <label for="age-field" class="text-input__label">Возраст (лет):</label>
+            <input class="text-input__input" type="number" name="age-field" id="age-field" value="7"
+              placeholder="Введите возраст питомца" required>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group-program group-program">
+        <ul class="form__list group-program__list">
+          <li class="form__item group-program__item radio">
+            <input type="radio" class="radio__input visually-hidden" name="program-goal" id="weight-loss" checked>
+            <label for="weight-loss" class="radio__label">Похудение</label>
+          </li>
+          <li class="form__item group-program__item radio">
+            <input type="radio" class="radio__input visually-hidden" name="program-goal" id="weight-gain">
+            <label for="weight-gain" class="radio__label">Набор массы</label>
+          </li>
+          <li class="form__item group-program__item radio">
+            <input type="radio" class="radio__input visually-hidden" name="program-goal" id="need-advice">
+            <label for="need-advice" class="radio__label">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group-contacts group-contacts">
         <legend class="group-contacts__title special-title">
-          <span class="special-title__heading special-heading">Контактные данные (владельца кота)</span>
+          <div class="special-title__container">
+            <span class="special-title__heading special-heading">Контактные данные (владельца кота)</span>
+          </div>
         </legend>
         <ul class="form__list group-contacts__list">
           <li class="form__item group-contacts__item text-input">
@@ -102,9 +104,11 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__group group-comments">
+      <fieldset class="form__group form__group-comments group-comments">
         <legend class="group-comments__title special-title">
-          <span class="special-title__heading special-heading">Комментарий</span>
+          <div class="special-title__container">
+            <span class="special-title__heading special-heading">Комментарий</span>
+          </div>
         </legend>
         <div class="group-comments__textarea-container">
           <label for="comments-textarea" class="group-comments__label visually-hidden">Введите ваше сообщение.</label>
@@ -112,9 +116,11 @@
             placeholder="Расскажите обо всех повадках кота" required></textarea>
         </div>
       </fieldset>
-      <fieldset class="form__group group-additional">
+      <fieldset class="form__group form__group-additional group-additional">
         <legend class="group-additional__title special-title">
-          <span class="special-title__heading special-heading">Дополнительно</span>
+          <div class="special-title__container">
+            <span class="special-title__heading special-heading">Дополнительно</span>
+          </div>
         </legend>
         <ul class="form__list group-additional__list">
           <li class="form__item group-additional__item checkbox">
@@ -145,9 +151,11 @@
   <footer class="footer footer--form">
     <section class="footer__contacts contacts-info">
       <h2 class="visually-hidden">Информация для партнеров.</h2>
-      <div class="contacts-info__wrapper">
-        <p class="contacts-info__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <address class="contacts-info__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+      <div class="contacts-info__container">
+        <div class="contacts-info__wrapper">
+          <p class="contacts-info__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <address class="contacts-info__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+        </div>
       </div>
       <div class="contacts-info__map-container">
         <picture>
@@ -224,4 +232,5 @@
   </footer>
   <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -60,17 +60,38 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    display: flex;
-    flex-direction: column;
-    gap: 70px 80px;
-  }
-
-  .form__group-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px 80px;
-    padding: 66px 40px 70px 40px;
+    gap: 70px 80px;
+    padding: 66px 0 80px 0;
+  }
+
+  .form__group-name {
+    margin-left: auto;
+  }
+
+  .form__group-program {
+    margin-right: auto;
+  }
+
+  .form__button-container {
     margin: 0 auto;
-    max-width: 1300px;
+    padding: 0 40px;
+    width: 1300px;
+    grid-column: 1/-1;
+    gap: 40px 80px;
+  }
+
+  .form__submit-button {
+    width: 570px;
+    margin: 0;
+  }
+
+  .form__explanation {
+    margin: 0;
+  }
+
+  .container {
+
   }
 }

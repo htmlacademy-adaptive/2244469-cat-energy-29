@@ -26,3 +26,26 @@
     padding-bottom: 0;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .group-contacts {
+    grid-column: 1/-1;
+  }
+
+  .group-contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 80px;
+    margin: 0 auto;
+    padding: 76px 40px 0 40px;
+    max-width: 1300px;
+  }
+
+  .group-contacts__item {
+    max-width: 570px;
+  }
+
+  .group-contacts__title {
+    padding-right: 0;
+  }
+}

@@ -1,6 +1,6 @@
 .group-additional {
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 .group-additional__title {
@@ -29,5 +29,24 @@
 
   .group-additional__item {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-additional {
+    grid-column: 1/-1;
+  }
+
+  .group-additional__list {
+    margin: 0 auto;
+    padding: 57px 40px 0 40px;
+    max-width: 1300px;
+    display: flex;
+    gap: 30px 104px;
+    flex-wrap: wrap;
+  }
+
+  .group-additional__item {
+    max-width: 223px;
   }
 }
