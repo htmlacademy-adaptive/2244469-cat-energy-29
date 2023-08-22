@@ -12,9 +12,9 @@
   <header class="header">
     <a class="header__logo logo logo--header" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="/img/logos/logo-image-desktop.svg">
-        <source media="(min-width: 768px)" srcset="/img/logos/logo-image-tablet.svg">
-        <img class="logo__image" src="img/logos/logo-image.svg" width="70" height="59"
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-image-desktop.svg", type="image/svg+xml", width="70" height="59">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-image-tablet.svg", type="image/svg+xml", width="60" height="50">
+        <img class="logo__image" src="img/logos/logo-image.svg" width="33" height="38"
           alt="Логотип интернет-магазина Кэт Энерджи.">
       </picture>
     </a>
@@ -77,9 +77,9 @@
       </fieldset>
       <fieldset class="form__group form__group-contacts group-contacts">
         <legend class="group-contacts__title special-title">
-          <div class="special-title__container">
+          <span class="special-title__wrapper">
             <span class="special-title__heading special-heading">Контактные данные (владельца кота)</span>
-          </div>
+          </span>
         </legend>
         <ul class="form__list group-contacts__list">
           <li class="form__item group-contacts__item text-input">
@@ -106,9 +106,9 @@
       </fieldset>
       <fieldset class="form__group form__group-comments group-comments">
         <legend class="group-comments__title special-title">
-          <div class="special-title__container">
+          <span class="special-title__wrapper">
             <span class="special-title__heading special-heading">Комментарий</span>
-          </div>
+          </span>
         </legend>
         <div class="group-comments__textarea-container">
           <label for="comments-textarea" class="group-comments__label visually-hidden">Введите ваше сообщение.</label>
@@ -118,9 +118,9 @@
       </fieldset>
       <fieldset class="form__group form__group-additional group-additional">
         <legend class="group-additional__title special-title">
-          <div class="special-title__container">
+          <span class="special-title__wrapper">
             <span class="special-title__heading special-heading">Дополнительно</span>
-          </div>
+          </span>
         </legend>
         <ul class="form__list group-additional__list">
           <li class="form__item group-additional__item checkbox">

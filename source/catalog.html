@@ -10,9 +10,9 @@
   <header class="header">
     <a class="header__logo logo logo--header" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="/img/logos/logo-image-desktop.svg">
-        <source media="(min-width: 768px)" srcset="/img/logos/logo-image-tablet.svg">
-        <img class="logo__image" src="img/logos/logo-image.svg" width="70" height="59"
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-image-desktop.svg", type="image/svg+xml", width="70" height="59">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-image-tablet.svg", type="image/svg+xml", width="60" height="50">
+        <img class="logo__image" src="img/logos/logo-image.svg" width="33" height="38"
           alt="Логотип интернет-магазина Кэт Энерджи.">
       </picture>
     </a>
@@ -39,12 +39,16 @@
       <h2 class="visually-hidden">Список товаров.</h2>
       <ul class="catalog__list catalog-list">
         <li class="catalog__item product-card product-card--smaller-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-1.png" width="68" height="86"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-1-small-desktop@1x.png 1x, img/photos/catalog-image-1-small-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-1-small-tablet@1x.png 1x, img/photos/catalog-image-1-small-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-1-small-mobile@1x.jpg" srcset="img/photos/catalog-image-1-small-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи ПРО 500 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="product-details__table">
@@ -60,15 +64,19 @@
               <dd class="product-details__value">700 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--bigger-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-1.png" width="84" height="100"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-1-big-desktop@1x.png 1x, img/photos/catalog-image-1-big-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-1-big-tablet@1x.png 1x, img/photos/catalog-image-1-big-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-1-big-mobile@1x.jpg" srcset="img/photos/catalog-image-1-big-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи ПРО 1000 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy PRO 1000 г</h3>
             </a>
             <dl class="product-details__table">
@@ -84,15 +92,19 @@
               <dd class="product-details__value">1000 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--smaller-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-2.png" width="68" height="86"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-2-small-desktop@1x.png 1x, img/photos/catalog-image-2-small-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-2-small-tablet@1x.png 1x, img/photos/catalog-image-2-small-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-2-small-mobile@1x.jpg" srcset="img/photos/catalog-image-2-small-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи ПРО 500 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="product-details__table">
@@ -108,15 +120,19 @@
               <dd class="product-details__value">700 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--bigger-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-2.png" width="84" height="100"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-2-big-desktop@1x.png 1x, img/photos/catalog-image-2-big-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-2-big-tablet@1x.png 1x, img/photos/catalog-image-2-big-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-2-big-mobile@1x.jpg" srcset="img/photos/catalog-image-2-big-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи ПРО 1000 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy PRO 1000 г</h3>
             </a>
             <dl class="product-details__table">
@@ -132,15 +148,19 @@
               <dd class="product-details__value">1000 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--smaller-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-3.png" width="68" height="86"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-3-small-desktop@1x.png 1x, img/photos/catalog-image-3-small-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-3-small-tablet@1x.png 1x, img/photos/catalog-image-3-small-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-3-small-mobile@1x.jpg" srcset="img/photos/catalog-image-3-small-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи Слим 500 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy slim 500 г</h3>
             </a>
             <dl class="product-details__table">
@@ -156,15 +176,19 @@
               <dd class="product-details__value">400 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--bigger-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-3.png" width="84" height="100"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-3-big-desktop@1x.png 1x, img/photos/catalog-image-3-big-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-3-big-tablet@1x.png 1x, img/photos/catalog-image-3-big-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-3-big-mobile@1x.jpg" srcset="img/photos/catalog-image-3-big-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи Слим 1000 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy slim 1000 г</h3>
             </a>
             <dl class="product-details__table">
@@ -180,15 +204,19 @@
               <dd class="product-details__value">700 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--smaller-size">
-          <a class="product-card__link product-card__link--image" href="">
-            <img class="product-card__image" src="img/photos/catalog-item-4.png" width="68" height="86"
+          <a class="product-card__link product-card__link--image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/photos/catalog-image-4-small-desktop@1x.png 1x, img/photos/catalog-image-4-small-desktop@2x.png 2x", type="image/png", width="169" height="210">
+              <source media="(min-width: 768px)" srcset="img/photos/catalog-image-4-small-tablet@1x.png 1x, img/photos/catalog-image-4-small-tablet@2x.png 2x", type="image/png", width="200" height="210">
+              <img class="product-card__image" src="img/photos/catalog-image-4-small-mobile@1x.jpg" srcset="img/photos/catalog-image-4-small-mobile@2x.jpg 2x" width="140" height="107"
               alt="Кэт Энерджи Слим 500 г.">
+            </picture>
           </a>
           <div class="product-card__table-container product-details">
-            <a class="product-card__link product-card__link--heading" href="">
+            <a class="product-card__link product-card__link--heading" href="#">
               <h3 class="product-card__heading">Cat Energy slim 500 г</h3>
             </a>
             <dl class="product-details__table">
@@ -204,10 +232,10 @@
               <dd class="product-details__value">500 ₽</dd>
             </dl>
           </div>
-          <a class="product-card__button button button--order" href="">Заказать</a>
+          <a class="product-card__button button button--order" href="#">Заказать</a>
         </li>
         <li class="catalog__item product-card product-card--show-more">
-          <a class="product-card__link product-card__link--image" href="">
+          <a class="product-card__link product-card__link--image" href="#">
             <h3 class="product-card__heading product-card__heading--show-more">Показать еще 100500 товаров</h3>
           </a>
           <p class="product-card__subheading">На самом деле вкусов гораздо больше!</p>
@@ -217,7 +245,9 @@
     </section>
     <section class="additional-products">
       <h2 class="additional-products__heading special-title">
-        <span class="additional-products__special-heading special-title__heading">Дополнительные товары</span>
+        <span class="additional-products__special-heading special-title__wrapper">
+          <span class="special-title__heading special-heading">Дополнительные товары</span>
+        </span>
       </h2>
       <div class="additional-products__container">
         <ul class="additional-products__list">
@@ -229,7 +259,7 @@
                 <dd class="extra-items__price">200 ₽</dd>
               </dl>
             </div>
-            <a class="additional-products__button button button--order" href="">Заказать</a>
+            <a class="additional-products__button button button--order" href="#">Заказать</a>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__subheading">Питьевая вода</h3>
@@ -239,7 +269,7 @@
                 <dd class="extra-items__price">50 ₽</dd>
               </dl>
             </div>
-            <a class="additional-products__button button button--order" href="">Заказать</a>
+            <a class="additional-products__button button button--order" href="#">Заказать</a>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__subheading">Молоко</h3>
@@ -249,7 +279,7 @@
                 <dd class="extra-items__price">100 ₽</dd>
               </dl>
             </div>
-            <a class="additional-products__button button button--order" href="">Заказать</a>
+            <a class="additional-products__button button button--order" href="#">Заказать</a>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__subheading">Витамины</h3>
@@ -259,7 +289,7 @@
                 <dd class="extra-items__price">300 ₽</dd>
               </dl>
             </div>
-            <a class="additional-products__button button button--order" href="">Заказать</a>
+            <a class="additional-products__button button button--order" href="#">Заказать</a>
           </li>
         </ul>
         <div class="additional-products__promo promo-offer">
