@@ -28,3 +28,34 @@
   border: 1px solid #e7e7e7;
   resize: none;
 }
+
+@media (min-width: @tablet-width) {
+  .group-comments {
+    margin: 0;
+  }
+
+  .group-comments__title {
+    margin-bottom: 0;
+  }
+
+  .group-comments__textarea-container {
+    padding: 87px 70px 65px 70px;
+  }
+
+  .group-comments__textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-comments {
+    grid-column: 1/-1;
+  }
+
+  .group-comments__textarea-container {
+    max-width: 1300px;
+    padding: 78px 40px 0 40px;
+    margin: 0 auto;
+  }
+}

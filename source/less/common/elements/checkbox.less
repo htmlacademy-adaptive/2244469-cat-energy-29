@@ -34,3 +34,22 @@
 .checkbox__input:checked + .checkbox__label::after {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .checkbox__label {
+    min-height: 40px;
+    padding: 5px 0 0 60px;
+  }
+
+  .checkbox__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .checkbox__label::after {
+    width: 26px;
+    height: 26px;
+    top: calc(50% - 13px);
+    left: 7px;
+  }
+}

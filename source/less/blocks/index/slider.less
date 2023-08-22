@@ -1,13 +1,132 @@
 .slider {
   position: relative;
-  z-index: 10;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+}
+
+.slider__list {
+  width: 280px;
+  height: 256px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider__item {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 280px;
+  height: 256px;
+  background-color: #eaeaea;
+
+  &--before {
+    width: 50%;
+    transition: width 1s;
+    overflow: hidden;
+    z-index: 10;
+  }
+}
+
+.slider__image {
+  max-width: none;
+  width: 280px;
+  height: 256px;
+}
+
+.slider__button {
+  position: absolute;
+  left: calc(50% - 2px);
+  top: 0;
+  width: 4px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  background-color: #666666;
+  appearance: none;
+  cursor: pointer;
+  z-index: 20;
+  transition: left 1s;
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background: url("../../../img/slider-thumb.svg") no-repeat center;
+    content: "";
+    z-index: 15;
+  }
+}
+
+.slider--state-before .slider__item--before {
+  width: 100%;
+}
+
+.slider--state-after .slider__item--before {
+  width: 0;
+}
+
+.slider--state-before .slider__button {
+  left: 100%;
+}
+
+.slider--state-after .slider__button {
+  left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__list {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__item {
+    width: 560px;
+    height: 512px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff 151px, #eaeaea 151px, #eaeaea 100%);
+
+    &--before {
+      width: 50%;
+    }
+  }
+
+  .slider__image {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .slider {
     position: absolute;
-    top: 0;
-    right: 110px;
+    bottom: 85px;
+    right: 0;
     width: 560px;
+  }
+
+  .slider__list {
+    width: 560px;
+  }
+
+  .slider__item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 560px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff 135px, #f2f2f2 135px, #f2f2f2 100%);
+
+    &--before {
+      width: 50%;
+      z-index: 10;
+    }
   }
 }

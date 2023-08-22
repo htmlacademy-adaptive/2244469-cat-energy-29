@@ -4,21 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин корма для кошек "Кэт энерджи"</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--index">
   <header class="header">
     <a class="header__logo logo logo--header" href="#">
       <picture>
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-image-desktop.svg", type="image/svg+xml", width="70" height="59">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-image-tablet.svg", type="image/svg+xml", width="60" height="50">
         <img class="logo__image" src="img/logos/logo-image.svg" width="33" height="38"
           alt="Логотип интернет-магазина Кэт Энерджи.">
       </picture>
     </a>
-    <nav class="header__main-nav main-nav main-nav--closed">
+    <nav class="header__main-nav main-nav main-nav--closed main-nav--no-js">
       <button class="main-nav__toggle">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <ul class="main-nav__list navigation-list">
+      <ul class="main-nav__list navigation-list navigation-list--index">
         <li class="navigation-list__item navigation-list__item--current">
           <a class="navigation-list__link" href="#">Главная</a>
         </li>
@@ -38,9 +44,9 @@
         <div class="hero__wrapper">
           <h2 class="hero__heading">Функциональное питание для котов</h2>
           <p class="hero__text">Занялся собой? Займись котом!</p>
+          <a class="hero__button button button--find-program" href="form.html">Подобрать программу</a>
         </div>
       </div>
-      <a class="hero__button button button--find-program" href="form.html">Подобрать программу</a>
     </section>
     <section class="main-container__programs programs">
       <h2 class="visually-hidden">Подбор программы питания.</h2>
@@ -51,7 +57,7 @@
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
             поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="programs-list__button" href="">Каталог slim</a>
+          <a class="programs-list__button" href="#">Каталог slim</a>
         </li>
         <li class="programs-list__item  programs-list__item--pro">
           <h3 class="programs-list__heading">Набор массы</h3>
@@ -59,7 +65,7 @@
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!
           </p>
-          <a class="programs-list__button" href="">Каталог pro</a>
+          <a class="programs-list__button" href="#">Каталог pro</a>
         </li>
       </ul>
     </section>
@@ -81,53 +87,68 @@
       </ul>
     </section>
     <section class="main-container__example example">
-      <h2 class="example__heading">Живой пример</h2>
-      <p class="example__description">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
-        без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <div class="example__table-container example-stats">
-        <dl class="example-stats__table">
-          <dt class="example-stats__value">5 КГ</dt>
-          <dd class="example-stats__description">Снижение веса</dd>
-        </dl>
-        <dl class="example-stats__table">
-          <dt class="example-stats__value">60 ДНЕЙ</dt>
-          <dd class="example-stats__description">Затрачено времени</dd>
-        </dl>
-      </div>
-      <p class="example__total">Затраты на питание: <span>15&nbsp;000&nbsp;РУБ.</span></p>
-      <div class="example__slider slider">
-        <img class="slider__image slider__image--before" src="img/photos/slider-cat-before.png" width="280" height="256"
-          alt="Фото кота до.">
-        <img class="slider__image slider__image--after" src="img/photos/slider-cat-after.png" width="280" height="256"
-          alt="Фото кота после.">
-      </div>
-      <div class="example__slider-toggle">
-        <button class="example__button example__button--left" type="button">
-          <span class="visually-hidden">Кнопка перемещения влево.</span>
-        </button>
-        <button class="example__button example__button--right" type="button">
-          <span class="visually-hidden">Кнопка перемещения вправо.</span>
-        </button>
+      <div class="example__wrapper">
+        <h2 class="example__heading">Живой пример</h2>
+        <p class="example__description">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+          без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <div class="example__table-container example-stats">
+          <dl class="example-stats__table">
+            <dt class="example-stats__value">5 КГ</dt>
+            <dd class="example-stats__description">Снижение веса</dd>
+          </dl>
+          <dl class="example-stats__table">
+            <dt class="example-stats__value">60 ДНЕЙ</dt>
+            <dd class="example-stats__description">Затрачено времени</dd>
+          </dl>
+        </div>
+        <p class="example__total">Затраты на питание: <span>15&nbsp;000&nbsp;РУБ.</span></p>
+        <div class="example__slider slider">
+          <ul class="slider__list">
+            <li class="slider__item slider__item--before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/photos/slider-image-before-tablet@1x.png 1x, img/photos/slider-image-before-tablet@2x.png 2x", type="image/png", width="560" height="512">
+                <img class="slider__image" src="img/photos/slider-image-before-mobile@1x.png" width="280" height="256"
+                alt="Фото кота до.">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/photos/slider-image-after-tablet@1x.png 1x, img/photos/slider-image-after-tablet@2x.png 2x", type="image/png", width="560" height="512">
+                <img class="slider__image slider__image--after" src="img/photos/slider-cat-after.png" width="280" height="256"
+                alt="Фото кота после.">
+              </picture>
+            </li>
+          </ul>
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Кнопка перемещения шторки слайдера вправо и влево.</span>
+          </button>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <section class="footer__contacts contacts-info">
       <h2 class="visually-hidden">Информация для партнеров.</h2>
-      <div class="contacts-info__wrapper">
-        <p class="contacts-info__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <address class="contacts-info__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+      <div class="contacts-info__container">
+        <div class="contacts-info__wrapper">
+          <p class="contacts-info__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <address class="contacts-info__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+        </div>
       </div>
-      <picture>
-        <img class="contacts-info__map-image" src="img/our-location-map.jpg" width="320" height="362"
-          alt="Как нас найти.">
-      </picture>
-      <iframe class="contacts-info__live-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4362.846395073377!2d30.324672007656083!3d59.93956844455115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690623407654!5m2!1sru!2sru"
-        width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contacts-info__map-container">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/our-location-map-desktop@1x.jpg 1x, img/our-location-map-desktop@2x.jpg 2x", type="image/jpg", width="1440" height="400">
+          <source media="(min-width: 768px)" srcset="img/our-location-map-tablet@1x.jpg 1x, img/our-location-map-tablet@2x.jpg 2x", type="image/jpg", width="768" height="400">
+          <img class="contacts-info__map-image" src="img/our-location-map-mobile@1x.jpg", srcset="img/our-location-map-mobile@2x.jpg" width="320" height="362"
+            alt="Как нас найти.">
+        </picture>
+        <iframe class="contacts-info__live-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4362.846395073377!2d30.324672007656083!3d59.93956844455115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690623407654!5m2!1sru!2sru"
+          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
     <section class="footer__social social-info social-info--index">
       <h2 class="visually-hidden">Наши социальные сети и информация о разработчике.</h2>
@@ -191,5 +212,6 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

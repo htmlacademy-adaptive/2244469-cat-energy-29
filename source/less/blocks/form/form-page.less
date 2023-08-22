@@ -1,17 +1,39 @@
 .form-page__title {
   padding-bottom: 37px;
+  margin: 0;
 }
 
 .form-page__inner-text {
-  margin: 0 70px 39px 20px;
+  margin: 0;
+  padding: 0 20px;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.form-page__explanation {
-  display: block;
-  padding: 21px 83px 32px 83px;
-  text-align: center;
+@media (min-width: @tablet-width) {
+  .form-page__title {
+    padding: 0 30px 54px 70px;
+  }
+
+  .form-page__inner-text {
+    padding: 0 30px 0 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-page__title {
+    margin: 0 auto;
+    padding: 32px 40px 55px 40px;
+    max-width: 1300px;
+  }
+
+  .form-page__inner-text {
+    margin: 0 auto;
+    padding: 0 870px 0 40px;
+    max-width: 1300px;
+  }
 }

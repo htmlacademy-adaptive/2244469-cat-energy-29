@@ -1,10 +1,14 @@
-.footer--catalog,
-.footer--form {
+.footer {
   background-color: #f2f2f2;
 }
 
 .footer__logo {
   margin: 0 auto;
+}
+
+.footer--catalog .contacts-info__wrapper,
+.footer--form .contacts-info__wrapper {
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,7 +18,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .footer__social {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+
   .footer__logo {
     margin: 0;
+  }
+
+  .footer--catalog .contacts-info__wrapper,
+  .footer--form .contacts-info__wrapper {
+    background-color: #ffffff;
   }
 }

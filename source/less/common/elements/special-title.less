@@ -28,6 +28,8 @@
 @media (min-width: @tablet-width) {
   .special-title {
     padding-left: 30px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .special-title::before {
@@ -47,6 +49,12 @@
 
 @media (min-width: @desktop-width) {
   .special-title {
-    padding-left: 70px;
+    padding: 0;
+  }
+
+  .special-title__wrapper {
+    display: block;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 }
