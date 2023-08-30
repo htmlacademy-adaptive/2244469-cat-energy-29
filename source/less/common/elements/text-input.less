@@ -5,6 +5,28 @@
   align-items: center;
   width: 100%;
   margin-bottom: 14px;
+
+  &--email::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    right: 12px;
+    mask: url("../../../img/icons/stack.svg#email-icon") no-repeat center;
+    background-color: #222222;
+    width: 21px;
+    height: 20px;
+  }
+
+  &--tel::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    right: 12px;
+    mask: url("../../../img/icons/stack.svg#telephone-icon") no-repeat center;
+    background-color: #222222;
+    width: 21px;
+    height: 20px;
+  }
 }
 
 .text-input:last-child {
@@ -35,11 +57,24 @@
 @media (min-width: @tablet-width) {
   .text-input {
     margin-bottom: 20px;
+
+    &--email::before,
+    &--tel::before {
+      top: 16px;
+      right: 14px;
+    }
   }
 
   .text-input__input {
     padding: 11px 20px;
     font-size: 20px;
     line-height: normal;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-input--email::before,
+  .text-input--tel::before {
+    right: 16px;
   }
 }
