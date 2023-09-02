@@ -2,10 +2,18 @@
   position: relative;
   right: 0;
   width: 100%;
-  margin-top: 37px;
+  margin-top: 32px;
+
+  &--no-js {
+    margin-top: 43px;
+  }
 
   &--no-js .navigation-list {
     display: block;
+  }
+
+  &--no-js .main-nav__toggle {
+    display: none;
   }
 }
 
@@ -15,7 +23,7 @@
   right: 21px;
   width: 30px;
   height: 30px;
-  background: url("../../../img/main-nav-open-button-icon.svg") no-repeat center;
+  background: url("../img/main-nav-open-button-icon.svg") no-repeat center;
   background-size: 24px;
   border: none;
   appearance: none;
@@ -23,15 +31,18 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  background: url("../../../img/main-nav-open-button-icon.svg") no-repeat center;
+  background: url("../img/main-nav-open-button-icon.svg") no-repeat center;
 }
 
 .main-nav--opened .main-nav__toggle {
-  background: url("../../../img/close-button-icon.svg") no-repeat center;
+  background: url("../img/close-button-icon.svg") no-repeat center;
 }
 
 .main-nav--opened .navigation-list {
   display: block;
+  position: absolute;
+  top: 11px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
