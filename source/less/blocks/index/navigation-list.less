@@ -20,6 +20,30 @@
   }
 }
 
+.navigation-list__item a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .navigation-list__link {
   padding: 22px;
   display: block;
