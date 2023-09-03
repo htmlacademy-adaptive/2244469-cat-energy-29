@@ -1,5 +1,9 @@
 .checkbox {
   margin-bottom: 13px;
+
+  &:hover .checkbox__label::before {
+    border: 1px solid #bababa;
+  }
 }
 
 .checkbox__label {
@@ -33,6 +37,24 @@
 
 .checkbox__input:checked + .checkbox__label::after {
   display: block;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  outline: 2px solid #444444;
+  outline-offset: 2px;
+}
+
+.checkbox__input:focus:not(:focus-visible) + .checkbox__label::before {
+  outline: transparent;
+}
+
+.checkbox__input:focus-visible + .checkbox__label::before {
+  outline: 2px solid #444444;
+  outline-offset: 2px;
+}
+
+.checkbox__input:disabled + .checkbox__label {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

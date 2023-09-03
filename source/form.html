@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,19 +11,25 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page__body">
   <header class="header">
     <a class="header__logo logo logo--header" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logos/logo-image-desktop.svg", type="image/svg+xml", width="70" height="59">
-        <source media="(min-width: 768px)" srcset="img/logos/logo-image-tablet.svg", type="image/svg+xml", width="60" height="50">
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-image-desktop.svg" , type="image/svg+xml" ,
+          width="70" height="59">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-image-tablet.svg" , type="image/svg+xml" , width="60"
+          height="50">
         <img class="logo__image" src="img/logos/logo-image.svg" width="33" height="38"
           alt="Логотип интернет-магазина Кэт Энерджи.">
       </picture>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logos/logo-text-tablet-desktop-header.svg", type="image/svg+xml", width="118" height="21">
-        <source media="(min-width: 768px)" srcset="img/logos/logo-text-tablet-desktop-header.svg", type="image/svg+xml", width="101" height="18">
-        <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Текстовая часть логотипа интернет-магазина Кэт Энерджи.">
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-text-tablet-desktop-header.svg" ,
+          type="image/svg+xml" , width="118" height="21">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-text-tablet-desktop-header.svg" , type="image/svg+xml"
+          , width="101" height="18">
+        <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18"
+          alt="Текстовая часть логотипа интернет-магазина Кэт Энерджи.">
       </picture>
     </a>
     <nav class="header__main-nav main-nav main-nav--closed main-nav--no-js">
@@ -93,11 +100,17 @@
             <label for="email-field" class="text-input__label">E-mail:*</label>
             <input type="email" class="text-input__input" name="email-field" id="email-field"
               value="kuklachev@gmail.com" placeholder="Введите ваш email" required>
+            <svg class="text-input__icon text-input__icon--email" width="20" height="20" role="img">
+              <use xlink:href="img/icons/stack.svg#email-icon"></use>
+            </svg>
           </li>
           <li class="form__item group-contacts__item text-input text-input--tel">
             <label for="telephone-field" class="text-input__label">Телефон:*</label>
             <input type="tel" class="text-input__input" name="telephone-field" id="telephone-field"
               value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
+            <svg class="text-input__icon text-input__icon-tel" width="20" height="20" role="img">
+              <use xlink:href="img/icons/stack.svg#telephone-icon"></use>
+            </svg>
           </li>
         </ul>
       </fieldset>
@@ -222,4 +235,5 @@
   </footer>
   <script src="js/script.js"></script>
 </body>
+
 </html>
