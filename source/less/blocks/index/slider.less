@@ -54,6 +54,10 @@
     background-color: @color-secondary;
   }
 
+  &:hover .slider__thumb {
+    color: @color-secondary;
+  }
+
   &:focus {
     outline: transparent;
     background-color: @color-secondary;
@@ -77,20 +81,19 @@
   &:active {
     background-color: #5eaa2f;
   }
+
+  &:active .slider__thumb {
+    color: #5eaa2f;
+  }
 }
 
 .slider__thumb {
   position: absolute;
   top: calc(50% - 20px);
   left: calc(50% - 20px);
-
-  &:hover {
-    color: @color-secondary;
-  }
-
-  &:active {
-    color: #5eaa2f;
-  }
+  width: 40px;
+  height: 40px;
+  color: #666666;
 }
 
 .slider--state-before .slider__item--before {
