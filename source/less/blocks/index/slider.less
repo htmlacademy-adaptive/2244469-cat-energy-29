@@ -50,15 +50,46 @@
   z-index: 20;
   transition: left 1s;
 
-  &::before {
-    position: absolute;
-    top: calc(50% - 20px);
-    left: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    background: url("../img/slider-thumb.svg") no-repeat center;
-    content: "";
-    z-index: 15;
+  &:hover {
+    background-color: @color-secondary;
+  }
+
+  &:focus {
+    outline: transparent;
+    background-color: @color-secondary;
+  }
+
+  &:focus .slider__thumb {
+    outline: 3px solid @color-secondary;
+    outline-offset: 3px;
+    color: @color-secondary;
+  }
+
+  &:focus:not(:focus-visible) .slider__thumb {
+    outline: transparent;
+  }
+
+  &:focus-visible .slider__thumb {
+    outline: 3px solid @color-secondary;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+
+  &:hover {
+    color: @color-secondary;
+  }
+
+  &:active {
+    color: #5eaa2f;
   }
 }
 

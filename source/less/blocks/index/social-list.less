@@ -15,6 +15,34 @@
   width: 28px;
   height: 22px;
   text-align: center;
+
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    color: @color-secondary;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) + .radio__label::before {
+    outline: transparent;
+  }
+
+  &:focus-visible + .radio__label::before {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active .social-list__icon {
+    color: @color-secondary;
+    opacity: 0.3;
+  }
+}
+
+.social-list__icon {
+  color: #666666;
 }
 
 @media (min-width: @tablet-width) {
