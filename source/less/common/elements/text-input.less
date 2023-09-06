@@ -5,28 +5,6 @@
   align-items: center;
   width: 100%;
   margin-bottom: 14px;
-
-  &--email::before {
-    position: absolute;
-    content: "";
-    top: 13px;
-    right: 12px;
-    mask: url("../../../img/icons/stack.svg#email-icon") no-repeat center;
-    background-color: #222222;
-    width: 21px;
-    height: 20px;
-  }
-
-  &--tel::before {
-    position: absolute;
-    content: "";
-    top: 13px;
-    right: 12px;
-    mask: url("../../../img/icons/stack.svg#telephone-icon") no-repeat center;
-    background-color: #222222;
-    width: 21px;
-    height: 20px;
-  }
 }
 
 .text-input:last-child {
@@ -46,27 +24,51 @@
   background-color: #ffffff;
   border: 1px solid #e7e7e7;
   appearance: none;
+
+  &:invalid,
+  &:invalid:focus-within {
+    outline: 2px solid #ff8282;
+    outline-offset: -2px;
+  }
+
+  &:invalid + .text-input__icon,
+  &:invalid:focus-within + .text-input__icon {
+    color: #ff8282;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: -2px;
+  }
+
+  &:focus + .text-input__icon {
+    color: @color-secondary;
+  }
 }
 
 .text-input__icon {
   position: absolute;
-  top: 13px;
+  top: 18px;
   right: 13px;
+  color: #000000;
 }
 
 @media (min-width: @tablet-width) {
   .text-input {
     margin-bottom: 20px;
+  }
 
-    &--email::before,
-    &--tel::before {
-      top: 16px;
-      right: 14px;
-    }
+  .text-input__icon {
+    top: 16px;
+    right: 14px;
   }
 
   .text-input__input {
-    padding: 11px 20px;
+    padding: 11px 60px 11px 20px;
     font-size: 20px;
     line-height: normal;
   }

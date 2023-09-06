@@ -1,7 +1,58 @@
+.logo--header {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .logo--footer {
   display: block;
   padding: 20px;
   text-align: center;
+
+  &:hover .logo__text g,
+  &:focus .logo__text g {
+    fill: #3e3e3e;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active .logo__text g {
+    fill: #6b6b6b;
+  }
+}
+
+.logo--footer g {
+  fill: #111111;
 }
 
 @media (min-width: @tablet-width) {
@@ -12,6 +63,6 @@
 
 @media (min-width: @desktop-width) {
   .logo--footer {
-    padding: 0;
+    padding: 8px 0 2px 0;
   }
 }
