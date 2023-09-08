@@ -27,7 +27,8 @@
   background-size: 100% auto;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/photos/hero-background-cat-mobile@2x.jpg");
+    background: url("../img/photos/hero-background-cat-mobile@2x.jpg") no-repeat center top;
+    background-size: 100% auto;
   }
 }
 
@@ -79,7 +80,8 @@
     background-size: 709px 609px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/promo-can-tablet@2x.jpg");
+      background: #ffffff url("../img/photos/promo-can-tablet@2x.jpg") no-repeat center;
+      background-size: 709px 609px;
     }
   }
 
@@ -128,29 +130,30 @@
 
 @media (min-width: @desktop-width) {
   .hero {
-    padding: 0 0 140px 0;
+    padding: 0 0 143px 0;
   }
 
   .hero::before {
     position: absolute;
     top: -154px;
-    right: 0;
+    right: -13px;
     left: auto;
     height: calc(100% + 154px);
-    width: 50%;
-    background: #62a63a url("../img/photos/hero-background-cat-desktop@1x.jpg") no-repeat center center;
+    width: calc(50% + 6px);
+    background: #62a63a url("../img/photos/hero-background-cat-desktop@1x.jpg") no-repeat center bottom;
     background-size: 100% auto;
     content: "";
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/hero-background-cat-desktop@2x.jpg");
+      background: #62a63a url("../img/photos/hero-background-cat-desktop@2x.jpg") no-repeat center bottom;
+      background-size: 100% auto;
     }
   }
 
   .hero::after {
     position: absolute;
-    left: 50%;
-    top: 0;
+    left: calc(50% + 4px);
+    top: -10px;
     height: 499px;
     width: 552px;
     transform: translateX(-29%);
@@ -160,12 +163,13 @@
     z-index: 10;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/promo-can-desktop@2x.png");
+      background: transparent url("../img/photos/promo-can-desktop@2x.png") no-repeat center center;
+      background-size: auto 100%;
     }
   }
 
   .hero__container {
-    padding: 81px 654px 40px 120px;
+    padding: 73px 654px 40px 127px;
     max-width: 1300px;
     margin: 0 auto;
     min-height: 400px;

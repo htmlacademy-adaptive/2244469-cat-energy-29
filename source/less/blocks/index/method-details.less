@@ -160,11 +160,19 @@
 
 @media (min-width: @desktop-width) {
   .method-details {
-    padding: 0 40px;
+    padding: 0 110px;
   }
 
   .method-details__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px 94px;
+    gap: 30px 80px;
+  }
+
+  .method-details__item {
+    padding: 151px 0 57px 0;
+
+    &::after {
+      padding: 0 0 0 55px;
+    }
   }
 }
