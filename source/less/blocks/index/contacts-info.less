@@ -82,7 +82,7 @@
 
   .contacts-info__wrapper span {
     display: block;
-    margin-top: 12px;
+    margin-top: 20px;
   }
 
   .contacts-info__heading {
@@ -99,9 +99,10 @@
   }
 
   .contacts-info__map-container {
+    min-height: 400px;
     &::before {
       top: 146px;
-      left: calc(50% - 68px);
+      left: calc(50% - 52px);
       width: 114px;
       height: 106px;
       background: url("../img/maps/map-pin-tablet@1x.png") no-repeat center;
@@ -112,6 +113,12 @@
         background-size: 100% auto;
       }
     }
+  }
+
+  .contacts-info__map-image,
+  .contacts-info__live-map {
+    width: 100%;
+    height: 100%;
   }
 }
 

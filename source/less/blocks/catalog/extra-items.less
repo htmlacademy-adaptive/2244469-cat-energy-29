@@ -1,5 +1,5 @@
 .extra-items__table {
-  margin: 0 0 15px 0;
+  margin: 0 0 14px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -16,8 +16,11 @@
 @media (min-width: @tablet-width) {
   .extra-items__table {
     margin: 0;
-    justify-content: flex-end;
-    gap: 10px 48px;
+    padding: 2px 2px 0 0;
+    display: grid;
+    grid-template-columns: 140px 74px;
+    justify-items: end;
+    justify-content: end;
   }
 
   .extra-items__description,

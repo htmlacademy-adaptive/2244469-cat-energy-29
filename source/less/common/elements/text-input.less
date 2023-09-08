@@ -4,7 +4,7 @@
   gap: 13px;
   align-items: center;
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .text-input:last-child {
@@ -14,7 +14,7 @@
 .text-input__input {
   flex-grow: 1;
   padding: 14px 50px 13px 15px;
-  min-width: 173px;
+  width: 167px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -52,14 +52,19 @@
 
 .text-input__icon {
   position: absolute;
-  top: 18px;
-  right: 13px;
+  top: 12px;
+  right: 12px;
   color: #000000;
+}
+
+.text-input__input::-webkit-outer-spin-button,
+.text-input__input::-webkit-inner-spin-button {
+  appearance: none;
 }
 
 @media (min-width: @tablet-width) {
   .text-input {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .text-input__icon {

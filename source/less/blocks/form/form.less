@@ -4,7 +4,7 @@
 
 .form__group {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   border: 0;
 }
 
@@ -22,8 +22,17 @@
   white-space: nowrap;
 }
 
+.form__group-program {
+  margin-bottom: 26px;
+}
+
+.form__group-contacts {
+  margin-bottom: 0;
+}
+
 .form__button-container {
-  padding: 34px 20px 32px 20px;
+  padding: 0 20px;
+  margin-bottom: 32px;
 }
 
 .form__submit-button {
@@ -45,21 +54,28 @@
     line-height: normal;
   }
 
+  .form__group-program {
+    margin-bottom: 0;
+  }
+
   .form__button-container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 64px 20px;
     padding: 0 30px 60px 30px;
+    margin-bottom: 0;
   }
 
   .form__submit-button {
     width: 282px;
     margin: 0 0 0 41px;
+    padding: 12px 44px;
     font-size: 20px;
     line-height: normal;
   }
 
   .form__explanation {
+    margin-left: 40px;
     font-size: 16px;
   }
 }

@@ -117,7 +117,7 @@
   }
 
   .programs-list__item {
-    padding: 77px 360px 57px 52px;
+    padding: 77px 316px 52px 52px;
   }
 
   .programs-list__item::before {
@@ -154,6 +154,8 @@
   }
 
   .programs-list__text {
+    padding: 0;
+    margin-bottom: 44px;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -164,6 +166,10 @@
     max-width: 175px;
     font-size: 20px;
     line-height: normal;
+
+    &::before {
+      left: calc(100% - 44px);
+    }
   }
 }
 

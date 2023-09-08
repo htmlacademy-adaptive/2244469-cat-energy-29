@@ -34,9 +34,16 @@
   font-weight: 400;
   text-transform: uppercase;
   color: #222222;
+
+  &--show-more {
+    max-width: 220px;
+    margin: 0 auto;
+    color: #111111;
+  }
 }
 
 .product-card--show-more {
+  padding-top: 77px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -47,13 +54,23 @@
   }
 }
 
-.product-card__heading--show-more {
-  margin-bottom: 8px;
-  color: #111111;
+.product-card--show-more .product-card__link::before,
+.product-card--show-more .product-card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background-color: #d3d3d3;
+  content: "";
+}
+
+.product-card--show-more .product-card__link::after {
+  transform: rotate(90deg);
 }
 
 .product-card__subheading {
-  margin: 0 0 21px 0;
+  margin: 0 0 8px 0;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
@@ -70,13 +87,13 @@
   .product-card {
     position: relative;
     display: block;
-    padding: 16px 37px 40px 37px;
+    padding: 23px 37px 40px 37px;
     background: linear-gradient(to top, #f2f2f2, #f2f2f2 430px, transparent 430px, transparent 100%);
     border-top: none;
   }
 
   .product-card__link {
-    margin: 0 auto 22px auto;
+    margin: 0 auto 17px auto;
   }
 
   .product-card__image {
@@ -101,7 +118,7 @@
   }
 
   .product-card--show-more {
-    padding: 14px 20px 40px 20px;
+    padding: 3px 35px 40px 35px;
     border: 2px solid #f2f2f2;
     background: #ffffff;
   }
@@ -110,21 +127,13 @@
     display: block;
     margin: 0 auto 23px auto;
     width: 170px;
-  }
 
-  .product-card--show-more .product-card__link::before,
-  .product-card--show-more .product-card__link::after {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    width: 2px;
-    height: 60px;
-    background-color: #d3d3d3;
-    content: "";
-  }
-
-  .product-card--show-more .product-card__link::after {
-    transform: rotate(90deg);
+    &::before,
+    &::after {
+      top: 49px;
+      width: 2px;
+      height: 60px;
+    }
   }
 
   .product-card__heading--show-more {
@@ -134,7 +143,7 @@
 
   .product-card--show-more .product-card__subheading {
     margin: 0 0 81px 0;
-    padding: 0 50px;
+    padding: 0 20px;
     font-size: 16px;
     line-height: 18px;
   }
