@@ -17,6 +17,10 @@
   }
 }
 
+.main-nav__list {
+  margin: 0;
+}
+
 .main-nav__toggle {
   position: absolute;
   top: -41px;
@@ -53,6 +57,10 @@
     margin: 0 0 0 auto;
   }
 
+  .main-nav__list {
+    margin-left: -3px;
+  }
+
   .main-nav .navigation-list,
   .main-nav--no-js .navigation-list {
     display: flex;
@@ -66,5 +74,10 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 580px;
+  }
+
+  .main-nav__list {
+    justify-content: flex-end;
+    margin-right: 3px;
   }
 }
