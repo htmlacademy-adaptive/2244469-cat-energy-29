@@ -18,6 +18,28 @@
   &--heading {
     padding: 0 50px 0 0;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product-card__image {
