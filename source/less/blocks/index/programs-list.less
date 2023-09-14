@@ -175,13 +175,13 @@
 
 @media (min-width: @desktop-width) {
   .programs-list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px 80px;
   }
 
   .programs-list__item {
     padding: 77px 61px 53px 52px;
-    width: 50%;
   }
 
   .programs-list__item::before {

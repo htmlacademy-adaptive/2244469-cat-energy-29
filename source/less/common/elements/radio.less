@@ -20,7 +20,7 @@
 
 .radio__label::before {
   position: absolute;
-  top: 0;
+  top: calc(50% - 15px);
   left: 0;
   width: 30px;
   height: 30px;
@@ -64,12 +64,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .radio {
+    margin-bottom: 12px;
+  }
+
   .radio__label {
     min-height: 40px;
     padding: 5px 0 0 60px;
   }
 
   .radio__label::before {
+    top: calc(50% - 20px);
     width: 40px;
     height: 40px;
   }

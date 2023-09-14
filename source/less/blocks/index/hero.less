@@ -1,41 +1,49 @@
 .hero {
   position: relative;
-  padding: 0 0 178px 0;
-  background: linear-gradient(to bottom, #63a63c, #63a63c 302px, #ffffff 302px, #ffffff 100%);
+  background: linear-gradient(to bottom, #63a63c, #63a63c 63%, #ffffff 63%, #ffffff 100%);
 
   &::before {
+    content: "";
     position: absolute;
-    bottom: 43px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 270px;
-    background: url("../img/photos/promo-can-mobile@1x.png") no-repeat center;
-    background-size: 280px 270px;
-    content: "";
-    z-index: 10;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/promo-can-mobile@2x.png");
-      background-size: 280px 270px;
-    }
-  }
-}
-
-.hero__container {
-  position: relative;
-  height: 302px;
-  background: url("../img/photos/hero-background-cat-mobile@1x.jpg") no-repeat center top;
-  background-size: 100% auto;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/photos/hero-background-cat-mobile@2x.jpg") no-repeat center top;
+    height: 63%;
+    background-color: #62a63a;
+    background-image: url("../img/photos/hero-background-cat-mobile@1x.jpg");
+    background-image: image-set(
+      url("../img/photos/hero-background-cat-mobile@1x.webp") type("image/webp") 1x,
+      url("../img/photos/hero-background-cat-mobile@2x.webp") type("image/webp") 2x,
+      url("../img/photos/hero-background-cat-mobile@1x.jpg") type("image/jpeg") 1x,
+      url("../img/photos/hero-background-cat-mobile@2x.jpg") type("image/jpeg") 2x);
+    background-repeat: no-repeat;
+    background-position: center top;
     background-size: 100% auto;
   }
 }
 
 .hero__wrapper {
   position: relative;
-  padding: 27px 0 0 0;
+  padding: 27px 0 301px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    background-color: transparent;
+    background-image: url("../img/photos/promo-can-mobile@1x.png");
+    background-image: image-set(
+      url("../img/photos/promo-can-mobile@1x.webp") type("image/webp") 1x,
+      url("../img/photos/promo-can-mobile@2x.webp") type("image/webp") 2x,
+      url("../img/photos/promo-can-mobile@1x.png") type("image/png") 1x,
+      url("../img/photos/promo-can-mobile@2x.png") type("image/png") 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 280px 270px;
+  }
 }
 
 .hero__heading {
@@ -53,6 +61,7 @@
 .hero__text {
   position: relative;
   margin: 0;
+  padding: 0 20px;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 14px;
@@ -64,24 +73,32 @@
 
 .hero__button {
   position: relative;
-  margin: 302px 20px 0 20px;
+  margin: 0 20px;
   z-index: 10;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .hero {
     background: #ffffff;
     padding: 0 0 201px 0;
-  }
 
-  .hero::before {
-    bottom: 0;
-    height: 609px;
-    background: #ffffff url("../img/photos/promo-can-tablet@1x.jpg") no-repeat center;
-    background-size: 709px 609px;
-
-    @media (min-resolution: 2dppx) {
-      background: #ffffff url("../img/photos/promo-can-tablet@2x.jpg") no-repeat center;
+    &::before {
+      top: auto;
+      bottom: 0;
+      height: 609px;
+      background-color: #ffffff;
+      background-image: url("../img/photos/promo-can-tablet@1x.jpg");
+      background-image: image-set(
+        url("../img/photos/promo-can-tablet@1x.webp") type("image/webp") 1x,
+        url("../img/photos/promo-can-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/photos/promo-can-tablet@1x.jpg") type("image/jpeg") 1x,
+        url("../img/photos/promo-can-tablet@2x.jpg") type("image/jpeg") 2x);
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: 709px 609px;
     }
   }
@@ -113,6 +130,7 @@
 
   .hero__text {
     margin: 0 0 50px 0;
+    padding: 0;
     width: 440px;
     font-size: 20px;
     line-height: 20px;
@@ -121,7 +139,7 @@
   }
 
   .hero__button {
-    margin: 0;
+    margin: 0 0 0 90px;
     padding: 17px 26px;
     width: 244px;
     font-size: 20px;
@@ -132,40 +150,46 @@
 @media (min-width: @desktop-width) {
   .hero {
     padding: 0 0 143px 0;
-  }
 
-  .hero::before {
-    position: absolute;
-    top: -146px;
-    right: 0;
-    left: auto;
-    height: calc(100% + 146px);
-    width: 50%;
-    background: #62a63a url("../img/photos/hero-background-cat-desktop@1x.jpg") no-repeat center center;
-    background-size: 100% auto;
-    content: "";
-
-    @media (min-resolution: 2dppx) {
-      background: #62a63a url("../img/photos/hero-background-cat-desktop@2x.jpg") no-repeat center center;
+    &::before {
+      position: absolute;
+      top: -146px;
+      right: 0;
+      left: auto;
+      height: calc(100% + 146px);
+      width: 50%;
+      background-color: #62a63a;
+      background-image: url("../img/photos/hero-background-cat-desktop@1x.jpg");
+      background-image: image-set(
+        url("../img/photos/hero-background-cat-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/photos/hero-background-cat-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/photos/hero-background-cat-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../img/photos/hero-background-cat-desktop@2x.jpg") type("image/jpg") 2x);
+      background-repeat: no-repeat;
+      background-position: center center;
       background-size: 100% auto;
+      content: "";
     }
-  }
 
-  .hero::after {
-    position: absolute;
-    left: calc(50% - 4px);
-    top: -10px;
-    height: 499px;
-    width: 552px;
-    transform: translateX(-29%);
-    background: transparent url("../img/photos/promo-can-desktop@1x.png") no-repeat center center;
-    background-size: auto 100%;
-    content: "";
-    z-index: 10;
-
-    @media (min-resolution: 2dppx) {
-      background: transparent url("../img/photos/promo-can-desktop@2x.png") no-repeat center center;
+    &::after {
+      position: absolute;
+      left: calc(50% - 4px);
+      top: -10px;
+      height: 499px;
+      width: 552px;
+      transform: translateX(-29%);
+      background-color: transparent;
+      background-image: url("../img/photos/promo-can-desktop@1x.png");
+      background-image: image-set(
+        url("../img/photos/promo-can-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/photos/promo-can-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/photos/promo-can-desktop@1x.png") type("image/png") 1x,
+        url("../img/photos/promo-can-desktop@2x.png") type("image/png") 2x);
+      background-repeat: no-repeat;
+      background-position: center center;
       background-size: auto 100%;
+      content: "";
+      z-index: 10;
     }
   }
 
@@ -188,5 +212,6 @@
 
   .hero__button {
     width: 244px;
+    margin: 0;
   }
 }

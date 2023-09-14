@@ -1,13 +1,16 @@
 .promo-offer {
   position: relative;
   padding: 0 20px;
-  background: @color-secondary url("../img/photos/catalog-promo-offer-background-mobile@1x.jpg") no-repeat center;
+  background-color: @color-secondary;
+  background-image: url("../img/photos/catalog-promo-offer-background-mobile@1x.jpg");
+  background-image: image-set(
+    url("../img/photos/catalog-promo-offer-background-mobile@1x.webp") type("image/webp") 1x,
+    url("../img/photos/catalog-promo-offer-background-mobile@2x.webp") type("image/webp") 2x,
+    url("../img/photos/catalog-promo-offer-background-mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../img/photos/catalog-promo-offer-background-mobile@2x.jpg") type("image/jpeg") 2x);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 100% auto;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/photos/catalog-promo-offer-background-mobile@2x.jpg");
-    background-size: 100% auto;
-  }
 }
 
 .promo-offer__text {
@@ -34,13 +37,16 @@
   .promo-offer {
     padding: 0;
     min-height: 200px;
-    background: @color-secondary url("../img/photos/catalog-promo-offer-background-tablet@1x.jpg") no-repeat center;
+    background-color: @color-secondary;
+    background-image: url("../img/photos/catalog-promo-offer-background-tablet@1x.jpg");
+    background-image: image-set(
+      url("../img/photos/catalog-promo-offer-background-tablet@1x.webp") type("image/webp") 1x,
+      url("../img/photos/catalog-promo-offer-background-tablet@2x.webp") type("image/webp") 2x,
+      url("../img/photos/catalog-promo-offer-background-tablet@1x.jpg") type("image/jpeg") 1x,
+      url("../img/photos/catalog-promo-offer-background-tablet@2x.jpg") type("image/jpeg") 2x);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 100% auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/catalog-promo-offer-background-tablet@2x.jpg");
-      background-size: 100% auto;
-    }
   }
 
   .promo-offer__text {
@@ -57,15 +63,18 @@
 @media (min-width: @desktop-width) {
   .promo-offer {
     margin: 0;
-    height: 288px;
-    min-width: 245px;
-    background: @color-secondary url("../img/photos/catalog-promo-offer-background-desktop@1x.jpg") no-repeat left center;
+    min-height: 288px;
+    width: 245px;
+    background-color: @color-secondary;
+    background-image: url("../img/photos/catalog-promo-offer-background-desktop@1x.jpg");
+    background-image: image-set(
+      url("../img/photos/catalog-promo-offer-background-desktop@1x.webp") type("image/webp") 1x,
+      url("../img/photos/catalog-promo-offer-background-desktop@2x.webp") type("image/webp") 2x,
+      url("../img/photos/catalog-promo-offer-background-desktop@1x.jpg") type("image/jpeg") 1x,
+      url("../img/photos/catalog-promo-offer-background-desktop@2x.jpg") type("image/jpeg") 2x);
+    background-repeat: no-repeat;
+    background-position: left center;
     background-size: 100% auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/photos/catalog-promo-offer-background-desktop@2x.jpg");
-      background-size: 100% auto;
-    }
   }
 
   .promo-offer__text {

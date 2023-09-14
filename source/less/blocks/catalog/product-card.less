@@ -19,10 +19,6 @@
     padding: 0 50px 0 0;
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
   &:focus {
     outline: 2px solid #444444;
     outline-offset: 2px;
@@ -35,10 +31,6 @@
   &:focus-visible {
     outline: 2px solid #444444;
     outline-offset: 2px;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -108,9 +100,13 @@
 @media (min-width: @tablet-width) {
   .product-card {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0;
     padding: 23px 37px 40px 37px;
-    background: linear-gradient(to top, #f2f2f2, #f2f2f2 430px, transparent 430px, transparent 100%);
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, transparent 95px, #f2f2f2  95px, #f2f2f2  100%);
     border-top: none;
   }
 
@@ -140,14 +136,15 @@
   }
 
   .product-card--show-more {
-    padding: 3px 35px 40px 35px;
+    padding: 4px 35px 40px 35px;
+    height: 82%;
     border: 2px solid #f2f2f2;
     background: #ffffff;
   }
 
   .product-card--show-more .product-card__link {
     display: block;
-    margin: 0 auto 23px auto;
+    margin: 0 auto 22px auto;
     width: 170px;
 
     &::before,
@@ -164,24 +161,27 @@
   }
 
   .product-card--show-more .product-card__subheading {
-    margin: 0 0 81px 0;
+    margin: 0 auto;
     padding: 0 20px;
     font-size: 16px;
     line-height: 18px;
+    min-height: 38px;
   }
 
   .product-card__button {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .product-card__button--secondary {
     padding: 10px 80px;
+    margin-top: 77px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-card {
     padding: 27px 38px 40px 38px;
+    background: linear-gradient(to bottom, transparent, transparent 99px, #f2f2f2  99px, #f2f2f2  100%);
   }
 
   .product-card__link--image {
@@ -208,6 +208,8 @@
 
   .product-card--show-more {
     padding: 10px 35px 38px 35px;
+    height: 81%;
+    background: #ffffff;
   }
 
   .product-card--show-more .product-card__link {
@@ -230,5 +232,6 @@
 
   .product-card__button--secondary {
     padding: 10px 39px;
+    margin-top: 0;
   }
 }
