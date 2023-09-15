@@ -11,14 +11,13 @@
     height: 63%;
     background-color: #62a63a;
     background-image: url("../img/photos/hero-background-cat-mobile@1x.jpg");
-    background-image: image-set(
-      url("../img/photos/hero-background-cat-mobile@1x.webp") type("image/webp") 1x,
-      url("../img/photos/hero-background-cat-mobile@2x.webp") type("image/webp") 2x,
-      url("../img/photos/hero-background-cat-mobile@1x.jpg") type("image/jpeg") 1x,
-      url("../img/photos/hero-background-cat-mobile@2x.jpg") type("image/jpeg") 2x);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photos/hero-background-cat-mobile@2x.jpg");
+    }
   }
 }
 
@@ -35,14 +34,13 @@
     height: 270px;
     background-color: transparent;
     background-image: url("../img/photos/promo-can-mobile@1x.png");
-    background-image: image-set(
-      url("../img/photos/promo-can-mobile@1x.webp") type("image/webp") 1x,
-      url("../img/photos/promo-can-mobile@2x.webp") type("image/webp") 2x,
-      url("../img/photos/promo-can-mobile@1x.png") type("image/png") 1x,
-      url("../img/photos/promo-can-mobile@2x.png") type("image/png") 2x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280px 270px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photos/promo-can-mobile@2x.png");
+    }
   }
 }
 
@@ -92,14 +90,13 @@
       height: 609px;
       background-color: #ffffff;
       background-image: url("../img/photos/promo-can-tablet@1x.jpg");
-      background-image: image-set(
-        url("../img/photos/promo-can-tablet@1x.webp") type("image/webp") 1x,
-        url("../img/photos/promo-can-tablet@2x.webp") type("image/webp") 2x,
-        url("../img/photos/promo-can-tablet@1x.jpg") type("image/jpeg") 1x,
-        url("../img/photos/promo-can-tablet@2x.jpg") type("image/jpeg") 2x);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 709px 609px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photos/promo-can-tablet@2x.jpg");
+      }
     }
   }
 
@@ -160,15 +157,14 @@
       width: 50%;
       background-color: #62a63a;
       background-image: url("../img/photos/hero-background-cat-desktop@1x.jpg");
-      background-image: image-set(
-        url("../img/photos/hero-background-cat-desktop@1x.webp") type("image/webp") 1x,
-        url("../img/photos/hero-background-cat-desktop@2x.webp") type("image/webp") 2x,
-        url("../img/photos/hero-background-cat-desktop@1x.jpg") type("image/jpg") 1x,
-        url("../img/photos/hero-background-cat-desktop@2x.jpg") type("image/jpg") 2x);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 100% auto;
       content: "";
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photos/hero-background-cat-desktop@2x.jpg");
+      }
     }
 
     &::after {
@@ -180,16 +176,15 @@
       transform: translateX(-29%);
       background-color: transparent;
       background-image: url("../img/photos/promo-can-desktop@1x.png");
-      background-image: image-set(
-        url("../img/photos/promo-can-desktop@1x.webp") type("image/webp") 1x,
-        url("../img/photos/promo-can-desktop@2x.webp") type("image/webp") 2x,
-        url("../img/photos/promo-can-desktop@1x.png") type("image/png") 1x,
-        url("../img/photos/promo-can-desktop@2x.png") type("image/png") 2x);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: auto 100%;
       content: "";
       z-index: 10;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photos/promo-can-desktop@2x.png");
+      }
     }
   }
 

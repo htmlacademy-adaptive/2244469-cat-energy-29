@@ -27,11 +27,11 @@
         <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Текстовая часть логотипа интернет-магазина Кэт Энерджи.">
       </picture>
     </a>
-    <nav class="header__main-nav main-nav main-nav--closed main-nav--no-js">
-      <button class="main-nav__toggle">
+    <nav class="header__main-nav main-nav">
+      <button class="main-nav__toggle main-nav__toggle--closed">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <ul class="main-nav__list navigation-list">
+      <ul class="main-nav__list navigation-list navigation-list--form navigation-list--closed navigation-list--no-js">
         <li class="navigation-list__item">
           <a class="navigation-list__link" href="index.html">Главная</a>
         </li>
@@ -53,17 +53,17 @@
         <ul class="form__list group-name__list">
           <li class="form__item group-name__item text-input">
             <label for="name-field" class="text-input__label">Имя:*</label>
-            <input class="text-input__input" type="text" name="name-field" id="name-field" value="Барсик"
+            <input class="text-input__input text-input__input--name" type="text" name="name-field" id="name-field" value="Барсик"
               placeholder="Введите имя питомца" required>
           </li>
           <li class="form__item group-name__item text-input">
             <label for="weight-field" class="text-input__label">Вес (кг):*</label>
-            <input class="text-input__input" type="number" name="weight-field" id="weight-field" value="7"
+            <input class="text-input__input text-input__input--weight" type="number" name="weight-field" id="weight-field" value="7"
               placeholder="Введите вес питомца" required>
           </li>
           <li class="form__item group-name__item text-input">
             <label for="age-field" class="text-input__label">Возраст (лет):</label>
-            <input class="text-input__input" type="number" name="age-field" id="age-field" value="7"
+            <input class="text-input__input text-input__input--age" type="number" name="age-field" id="age-field" value="7"
               placeholder="Введите возраст питомца" required>
           </li>
         </ul>
@@ -93,7 +93,7 @@
         <ul class="form__list group-contacts__list">
           <li class="form__item group-contacts__item text-input text-input--email">
             <label for="email-field" class="text-input__label">E-mail:*</label>
-            <input type="email" class="text-input__input" name="email-field" id="email-field"
+            <input type="email" class="text-input__input text-input__input--email" name="email-field" id="email-field"
               value="kuklachev@gmail.com" placeholder="Введите ваш email" required>
             <svg class="text-input__icon text-input__icon--email" width="20" height="20" role="img">
               <use xlink:href="img/stack.svg#email-icon"></use>
@@ -101,7 +101,7 @@
           </li>
           <li class="form__item group-contacts__item text-input text-input--tel">
             <label for="telephone-field" class="text-input__label">Телефон:*</label>
-            <input type="tel" class="text-input__input" name="telephone-field" id="telephone-field"
+            <input type="tel" class="text-input__input text-input__input--tel" name="telephone-field" id="telephone-field"
               value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
             <svg class="text-input__icon text-input__icon-tel" width="20" height="20" role="img">
               <use xlink:href="img/stack.svg#phone-icon"></use>
@@ -156,7 +156,7 @@
   <footer class="footer footer--form">
     <section class="footer__contacts contacts-info">
       <h2 class="visually-hidden">Информация для партнеров.</h2>
-      <div class="contacts-info__wrapper">
+      <div class="contacts-info__wrapper contacts-info__wrapper--form">
         <p class="contacts-info__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contacts-info__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
       </div>
