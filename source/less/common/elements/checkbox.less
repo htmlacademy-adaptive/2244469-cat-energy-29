@@ -1,5 +1,5 @@
-.checkbox {
-  margin-bottom: 13px;
+.checkbox:not(:last-child) {
+  margin-bottom: 10px;
 
   &:hover .checkbox__label::before {
     border: 1px solid #bababa;
@@ -16,7 +16,7 @@
 
 .checkbox__label::before {
   position: absolute;
-  top: 0;
+  top: calc(50% - 15px);
   left: 0;
   width: 30px;
   height: 30px;
@@ -26,7 +26,7 @@
 
 .checkbox__label::after {
   position: absolute;
-  top: 0;
+  top: calc(50% - 16px);
   left: 0;
   width: 30px;
   height: 30px;
@@ -58,9 +58,13 @@
 }
 
 @media (min-width: @tablet-width) {
+  .checkbox:not(:last-child) {
+    margin-bottom: 0;
+  }
+
   .checkbox__label {
     min-height: 40px;
-    padding: 5px 0 0 60px;
+    padding: 9px 0 0 60px;
   }
 
   .checkbox__label::before {
@@ -71,7 +75,7 @@
   .checkbox__label::after {
     width: 26px;
     height: 26px;
-    top: calc(50% - 13px);
+    top: calc(50% - 8px);
     left: 7px;
   }
 }

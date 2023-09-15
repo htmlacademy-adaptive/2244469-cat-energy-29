@@ -1,5 +1,4 @@
 .navigation-list {
-  margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -45,7 +44,7 @@
 }
 
 .navigation-list__link {
-  padding: 22px;
+  padding: 23px 20px 22px 20px;
   display: block;
   color: #000000;
   text-decoration: none;
@@ -53,10 +52,10 @@
 
 @media (min-width: @tablet-width) {
   .navigation-list {
-    margin: 0 0 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 33px;
+    justify-content: flex-end;
+    gap: 10px 33px;
     background-color: transparent;
   }
 
@@ -69,7 +68,7 @@
   }
 
   .navigation-list__link {
-    padding: 12px 0;
+    padding: 12px 0 7px 0;
     font-size: 18px;
     line-height: 24px;
   }
@@ -81,7 +80,7 @@
 
 @media (min-width: @desktop-width) {
   .navigation-list__link {
-    padding: 10px 0;
+    padding: 10px 0 7px 0;
     font-size: 20px;
     line-height: normal;
   }

@@ -1,9 +1,14 @@
 .example-stats {
   position: relative;
   z-index: 10;
+}
+
+.example-stats__wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 32px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .example-stats__table {
@@ -12,7 +17,7 @@
 }
 
 .example-stats__value {
-  padding: 13px 20px;
+  padding: 14px 20px;
   min-width: 124px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -23,7 +28,7 @@
 
 .example-stats__description {
   margin-top: -9px;
-  margin-left: 19px;
+  margin-left: 18px;
   padding: 0 5px;
   max-width: 87px;
   font-size: 12px;
@@ -36,16 +41,26 @@
 
 @media (min-width: @tablet-width) {
   .example-stats {
-    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example-stats__wrapper {
+    justify-content: flex-start;
+    column-gap: 43px;
+    margin-bottom: 0;
+    max-width: 500px;
   }
 
   .example-stats__value {
+    padding: 14px 20px 20px 20px;
     min-width: 162px;
     font-size: 30px;
     line-height: 37px;
   }
 
   .example-stats__description {
+    margin-top: -10px;
     margin-left: 10px;
     min-width: 116px;
     max-width: 140px;
@@ -57,7 +72,28 @@
 }
 
 @media (min-width: @desktop-width) {
+  .example-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 47px;
+    max-width: 600px;
+  }
+
+  .example-stats__wrapper {
+    column-gap: 43px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    max-width: 500px;
+  }
+
   .example-stats__description {
+    margin-top: -7px;
+    margin-left: 14px;
+    max-width: 130px;
     background-color: #f2f2f2;
+  }
+
+  .example-stats__value {
+    padding: 14px 20px 17px 20px;
   }
 }

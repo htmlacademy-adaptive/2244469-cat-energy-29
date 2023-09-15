@@ -9,7 +9,7 @@
 
 .programs-list__item {
   position: relative;
-  padding: 20px;
+  padding: 30px 20px 7px 20px;
   background-color: #f2f2f2;
 
   &::before {
@@ -37,7 +37,7 @@
     content: "";
     position: absolute;
     top: 35px;
-    left: 13px;
+    left: 12px;
     width: 67px;
     height: 28px;
     background: url("../img/stack.svg#program-cat-pro") no-repeat center;
@@ -56,6 +56,7 @@
 
 .programs-list__text {
   padding: 0 0 23px 0;
+  margin: 0;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -67,7 +68,7 @@
   position: relative;
   display: block;
   max-width: 142px;
-  padding: 5px 44px 5px 0;
+  padding: 8px 44px 5px 2px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 36px;
@@ -79,21 +80,21 @@
   &::before {
     content: "";
     position: absolute;
-    top: calc(50% - 5px);
-    left: calc(100% - 40px);
-    width: 24px;
-    height: 10px;
+    top: calc(50% - 6px);
+    left: calc(100% - 42px);
+    width: 32px;
+    height: 14px;
     background: url("../img/stack.svg#icon_arrow") no-repeat center;
   }
 
   &:hover::before,
   &:focus::before {
-    width: 32px;
+    width: 39px;
   }
 
   &:focus {
     outline: 2px solid #444444;
-    outline-offset: 2px;
+    outline-offset: -1px;
   }
 
   &:focus:not(:focus-visible) {
@@ -102,7 +103,7 @@
 
   &:focus-visible {
     outline: 2px solid #444444;
-    outline-offset: 2px;
+    outline-offset: -1px;
   }
 
   &:active {
@@ -116,7 +117,7 @@
   }
 
   .programs-list__item {
-    padding: 77px 360px 57px 52px;
+    padding: 77px 316px 52px 52px;
   }
 
   .programs-list__item::before {
@@ -153,6 +154,8 @@
   }
 
   .programs-list__text {
+    padding: 0;
+    margin-bottom: 44px;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -163,18 +166,22 @@
     max-width: 175px;
     font-size: 20px;
     line-height: normal;
+
+    &::before {
+      left: calc(100% - 44px);
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .programs-list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px 80px;
   }
 
   .programs-list__item {
-    padding: 77px 61px 57px 52px;
-    width: 50%;
+    padding: 77px 61px 53px 52px;
   }
 
   .programs-list__item::before {
@@ -202,5 +209,9 @@
 
   .programs-list__heading {
     margin: 0 0 73px 162px;
+  }
+
+  .programs-list__text {
+    margin-bottom: 20px;
   }
 }

@@ -20,7 +20,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   padding: 0 0 0 80px;
   min-height: 60px;
   font-size: 14px;
@@ -43,7 +43,7 @@
 
   &--leaf::before {
     background: @color-secondary url("../img/stack.svg#method-item-leaf") no-repeat center;
-    background-size: 30px 32px;
+    background-size: 30px 28px;
   }
 
   &--flask::before {
@@ -76,31 +76,36 @@
   .method-details__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 130px;
+    gap: 37px 60px;
   }
 
   .method-details__item {
-    padding: 151px 0 57px 0;
+    padding: 151px 65px 57px 0;
     min-width: 230px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
   }
 
   .method-details__item::before {
     top: 40px;
+    width: 80px;
+    height: 80px;
   }
 
   .method-details__item::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5px;
+    right: 0;
     z-index: -1;
-    width: 100%;
+    width: 75%;
     height: 100%;
+    padding: 0 0 0 33px;
     font-family: "Oswald", sans-serif;
     font-size: 280px;
     line-height: 270px;
     font-weight: 400;
-    text-align: right;
     color: #f2f2f2;
   }
 
@@ -155,11 +160,19 @@
 
 @media (min-width: @desktop-width) {
   .method-details {
-    padding: 0 40px;
+    padding: 0 110px;
   }
 
   .method-details__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px 94px;
+    gap: 30px 80px;
+  }
+
+  .method-details__item {
+    padding: 151px 0 57px 0;
+
+    &::after {
+      padding: 0 0 0 55px;
+    }
   }
 }

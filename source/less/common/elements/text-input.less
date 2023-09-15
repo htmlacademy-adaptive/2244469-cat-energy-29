@@ -4,7 +4,7 @@
   gap: 13px;
   align-items: center;
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .text-input:last-child {
@@ -14,7 +14,7 @@
 .text-input__input {
   flex-grow: 1;
   padding: 14px 50px 13px 15px;
-  min-width: 173px;
+  width: 167px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -25,14 +25,22 @@
   border: 1px solid #e7e7e7;
   appearance: none;
 
-  &:invalid,
-  &:invalid:focus-within {
+  &--name:invalid,
+  &--name:invalid:focus-within,
+  &--weight:invalid,
+  &--weight:invalid:focus-within,
+  &--email:invalid,
+  &--email:invalid:focus-within,
+  &--tel:invalid,
+  &--tel:invalid:focus-within {
     outline: 2px solid #ff8282;
     outline-offset: -2px;
   }
 
-  &:invalid + .text-input__icon,
-  &:invalid:focus-within + .text-input__icon {
+  &--email:invalid + .text-input__icon,
+  &--email:invalid:focus-within + .text-input__icon,
+  &--tel:invalid + .text-input__icon,
+  &--tel:invalid:focus-within + .text-input__icon {
     color: #ff8282;
   }
 
@@ -52,18 +60,28 @@
 
 .text-input__icon {
   position: absolute;
-  top: 18px;
-  right: 13px;
+  top: calc(50% - 10px);
+  right: 12px;
   color: #000000;
 }
 
+.text-input__input::-webkit-outer-spin-button,
+.text-input__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+
 @media (min-width: @tablet-width) {
   .text-input {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .text-input__icon {
-    top: 16px;
     right: 14px;
   }
 
@@ -75,8 +93,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .text-input--email::before,
-  .text-input--tel::before {
-    right: 16px;
+  .text-input__icon {
+    right: 17px;
   }
 }

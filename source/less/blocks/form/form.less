@@ -4,7 +4,7 @@
 
 .form__group {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   border: 0;
 }
 
@@ -19,11 +19,19 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
-  white-space: nowrap;
+}
+
+.form__group-program {
+  margin-bottom: 26px;
+}
+
+.form__group-contacts {
+  margin-bottom: 0;
 }
 
 .form__button-container {
-  padding: 34px 20px 32px 20px;
+  padding: 0 20px;
+  margin-bottom: 32px;
 }
 
 .form__submit-button {
@@ -45,21 +53,29 @@
     line-height: normal;
   }
 
+  .form__group-program {
+    margin-bottom: 0;
+  }
+
   .form__button-container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 64px 20px;
     padding: 0 30px 60px 30px;
+    margin-bottom: 0;
   }
 
   .form__submit-button {
     width: 282px;
     margin: 0 0 0 41px;
+    padding: 12px 44px;
     font-size: 20px;
     line-height: normal;
   }
 
   .form__explanation {
+    margin-left: 40px;
     font-size: 16px;
   }
 }
@@ -68,8 +84,8 @@
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px 80px;
-    padding: 66px 0 80px 0;
+    gap: 62px 80px;
+    padding: 64px 0 81px 0;
   }
 
   .form__group-name {
@@ -82,8 +98,8 @@
 
   .form__button-container {
     margin: 0 auto;
-    padding: 0 40px;
-    width: 1300px;
+    padding: 0 110px;
+    width: 1440px;
     grid-column: 1/-1;
     gap: 40px 80px;
   }
@@ -94,6 +110,6 @@
   }
 
   .form__explanation {
-    margin: 0;
+    margin: 2px 0 0 -3px;
   }
 }
