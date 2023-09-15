@@ -25,14 +25,22 @@
   border: 1px solid #e7e7e7;
   appearance: none;
 
-  &:invalid,
-  &:invalid:focus-within {
+  &--name:invalid,
+  &--name:invalid:focus-within,
+  &--weight:invalid,
+  &--weight:invalid:focus-within,
+  &--email:invalid,
+  &--email:invalid:focus-within,
+  &--tel:invalid,
+  &--tel:invalid:focus-within {
     outline: 2px solid #ff8282;
     outline-offset: -2px;
   }
 
-  &:invalid + .text-input__icon,
-  &:invalid:focus-within + .text-input__icon {
+  &--email:invalid + .text-input__icon,
+  &--email:invalid:focus-within + .text-input__icon,
+  &--tel:invalid + .text-input__icon,
+  &--tel:invalid:focus-within + .text-input__icon {
     color: #ff8282;
   }
 
@@ -60,7 +68,13 @@
 .text-input__input::-webkit-outer-spin-button,
 .text-input__input::-webkit-inner-spin-button {
   appearance: none;
+  margin: 0;
 }
+
+input[type="number"] {
+  appearance: textfield;
+}
+
 
 @media (min-width: @tablet-width) {
   .text-input {
